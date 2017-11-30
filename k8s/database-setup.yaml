@@ -7,11 +7,9 @@ spec:
     metadata:
       name: database-setup
     spec:
-      nodeSelector:
-        cloud.google.com/gke-nodepool: $NODE_SELECTOR
       containers:
       - name: database-setup
-        image: $IMAGE_BACK
+        image: dougg/taiga-back
         imagePullPolicy: IfNotPresent
         command: ["./regenerate.sh", "-y"]
       restartPolicy: OnFailure

@@ -42,8 +42,6 @@ spec:
         app: taiga
         tier: postgres
     spec:
-      nodeSelector:
-        cloud.google.com/gke-nodepool: $NODE_SELECTOR
       containers:
       - image: postgres
         name: postgres
